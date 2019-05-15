@@ -84,5 +84,17 @@ namespace ynet
             }
             return true;
         }
+
+        public Comment GetCommentById(int id)
+        {
+            foreach (Comment comment in this.GetComments())
+            {
+                if (comment.CommentId == id)
+                {
+                    return comment;
+                }
+            }
+            return null;
+        }
     }
 }
